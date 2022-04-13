@@ -27,23 +27,27 @@
                 <th scope="col">Gender</th>
                 <th scope="col">Color</th>
                 <th scope="col">Size</th>
-                <th scope="col">Prize</th>
+                <th scope="col">Price</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
-            {{-- @foreach ($products as $key => $product)
+            @foreach ($products as $key => $product)
                 <tr>
                     <th>{{ $key + 1 }}</th>
                     <td>{{ $product->name }}</td>
                     <td><img src="{{ Storage::url($product->image)}}" width="80"></td>
-                    <td>
+                    <td>{{ $product->gender }}</td>
+                    <td>{{ $product->color }}</td>
+                    <td>{{ $product->size }}</td>
+                    <td>{{ $product->price }}</td>
+                    {{-- <td>
                         <a class="btn btn-primary btn-sm" href="{{ route('product.details', $product->id) }}">Details</i></a>
                         <a class="btn btn-info btn-sm" href="{{ route('product.edit', $product->id) }}">Edit</a>
                         <a class="btn btn-danger btn-sm" onclick="return confirm('Do you want to delete?')" href="{{ route('product.delete', $product->id) }}">Delete</a>
-                    </td>
+                    </td> --}}
                 </tr>
-            @endforeach --}}
+            @endforeach
         </tbody>
     </table>
     {{-- {{ $products->links() }} --}}

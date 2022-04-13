@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('gender');
             $table->string('color');
             $table->string('size');
-            $table->bigInteger('prize');
+            $table->bigInteger('price');
             $table->enum('deleted',['yes','no'])->default('no');
             $table->bigInteger('deleted_by')->nullable();
             $table->bigInteger('created_by')->nullable();

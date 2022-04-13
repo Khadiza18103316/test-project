@@ -53,7 +53,7 @@
                         <div class="col-lg-6">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Size</label>
-                                <select class="form-control" name="category">
+                                <select class="form-control" name="size">
                                     <option value="">Select Color</option>
                                     <option value="vegetarian">S</option>
                                     <option value="nonvegetarian">M</option>
