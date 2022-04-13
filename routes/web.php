@@ -16,9 +16,9 @@ use App\Http\Controllers\Backend\ProductController;
 |
 */
 
-Route::get('/', function () {
-    return view('admin.master');
-});
+Route::get('/admin', function () {
+    return view('admin.pages.dashboard.dash');
+})->name('admin.dashboard');
 
 // Dashboard
 Route::get ('/dashboard',[DashboardController::class,'dashboard'])->name('admin.dashboard');
