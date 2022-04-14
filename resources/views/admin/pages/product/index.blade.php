@@ -12,7 +12,7 @@
 @endif
 
 @if(session()->has('message'))
-    <p class="alert alert-message">{{session()->get('message')}}</p>
+    <p class="alert alert-success">{{session()->get('message')}}</p>
 @endif
 
     <a href="{{ route('product.create') }}" class="btn btn-primary float-end" ><i class="fa fa-plus"></i>Add Product</a>
@@ -41,11 +41,11 @@
                     <td>{{ $product->color }}</td>
                     <td>{{ $product->size }}</td>
                     <td>{{ $product->price }}</td>
-                    {{-- <td>
+                    <td>
                         <a class="btn btn-primary btn-sm" href="{{ route('product.details', $product->id) }}">Details</i></a>
                         <a class="btn btn-info btn-sm" href="{{ route('product.edit', $product->id) }}">Edit</a>
                         <a class="btn btn-danger btn-sm" onclick="return confirm('Do you want to delete?')" href="{{ route('product.delete', $product->id) }}">Delete</a>
-                    </td> --}}
+                    </td>
                 </tr>
             @endforeach
         </tbody>

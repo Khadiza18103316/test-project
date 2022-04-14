@@ -11,7 +11,12 @@
                     </a>
                 </li>
 
-
+                <li class="sidebar-item  ">
+                    <a href="{{route('user.index')}}" class='sidebar-link'>
+                        <i class="fa-solid fa-user"></i>
+                        <span>User</span>
+                    </a>
+                </li>
 
                 <li class="sidebar-item  ">
                     <a href="{{route('product.index')}}" class='sidebar-link'>

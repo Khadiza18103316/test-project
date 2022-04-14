@@ -4,24 +4,24 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\UserController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-Route::get('/admin', function () {
+
+Route::get('/', function () {
     return view('admin.pages.dashboard.dash');
 })->name('admin.dashboard');
 
 // Dashboard
 Route::get ('/dashboard',[DashboardController::class,'dashboard'])->name('admin.dashboard');
+
+// User
+Route::get ('/user/index',[UserController::class,'index'])->name('user.index');
+Route::get ('/user/registation',[UserController::class,'registation'])->name('user.registation');
+Route::post('/user/store',[UserController::class,'store'])->name('user.store');
+Route::get ('/user/edit/{id}',[UserController::class,'edit'])->name('user.edit');
+Route::put ('/user/update/{id}',[U::class,'update'])->name('user.update');
+Route::get ('/user/delete/{id}',[UserController::class,'delete'])->name('user.delete');
 
 // Product
 Route::get ('/product/index',[ProductController::class,'index'])->name('product.index');

@@ -55,10 +55,10 @@
                                 <label for="exampleInputEmail1" class="form-label">Size</label>
                                 <select class="form-control" name="size">
                                     <option value="">Select Color</option>
-                                    <option value="vegetarian">S</option>
-                                    <option value="nonvegetarian">M</option>
-                                    <option value="traditional">L</option>
-                                    <option value="traditional">XL</option>
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
                                 </select>
                             </div>
                         </div>

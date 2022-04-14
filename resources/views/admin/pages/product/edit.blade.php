@@ -34,6 +34,46 @@
 
                         <div class="col-lg-6">
                             <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Gender</label>
+                                <select class="form-control" name="gender">
+                                    <option value="">Select Gender</option>
+                                    <option value="man" @if ($product->gender == 'man' ? 'selected' : '') @endif >Man</option>
+                                    <option value="woman" @if ($product->gender == 'woman' ? 'selected' : '') @endif >Woman</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Color</label>
+                                <input value="{{$product->color}}" name="color" type="text" placeholder="Color" class="form-control">
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Size</label>
+                                <select class="form-control" name="size">
+                                    <option value="">Select Color</option>
+                                    <option value="s" @if ($product->size == 's' ? 'selected' : '') @endif >S</option>
+                                    <option value="m" @if ($product->size == 'm' ? 'selected' : '') @endif >M</option>
+                                    <option value="l" @if ($product->size == 'l' ? 'selected' : '') @endif >L</option>
+                                    <option value="xl" @if ($product->size == 'xl' ? 'selected' : '') @endif >XL</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Price</label>
+                                <input value="{{$product->price}}" name="price" type="number" placeholder="Price" class="form-control">
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="mb-3">
                                 <img id="output" src="" />
                                 <label for="exampleInputEmail1" class="form-label">Image</label>
                                 <input  name="image" type="file" id="image" class="form-control" onchange="loadFile(event)">
